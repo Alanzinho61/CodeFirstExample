@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Add</h1>
+
+
+<form action="/Clup/Add" method="post">
+    
+    <input type="text"  name="ClupName" placeholder="Isim" /> <br />
+    <input type="text" name="ClupPresident" placeholder="Klup Baskani" /> <br />
+    <input type="text" name="ClupColors" placeholder="Klup Rengi" /> <br />
+    <input type="text" name="ClupCity" placeholder="Klup Sehri" /> <br />
+
+    <input type="submit" value="Add" class="btn btn-success" />
+
+</form>

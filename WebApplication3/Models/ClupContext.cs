@@ -1,0 +1,15 @@
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace WebApplication3.Models
+{
+    public class ClupContext : DbContext
+    {
+        public ClupContext(DbContextOptions<ClupContext>dbContextoptions) : base(dbContextoptions)
+        {
+          
+        }
+
+        public DbSet<Clup> Clups { get; set; }
+    
+    }
+}

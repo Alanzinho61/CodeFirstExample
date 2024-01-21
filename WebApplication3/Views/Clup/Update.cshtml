@@ -1,0 +1,23 @@
+﻿@model WebApplication3.Models.Clup
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Update</h1>
+
+
+<form action="/Clup/Update" method="post">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+    
+
+    <input type="text" name="ClupName" value="@Model.ClupName" placeholder="Isim" /> <br />
+    <input type="text" name="ClupPresident" value="@Model.ClupPresident" placeholder="Klup Baskani" /> <br />
+    <input type="text" name="ClupColors"  value="@Model.ClupColors" placeholder="Klup Renkleri" /> <br />
+    <input type="text" name="ClupCity"  value="@Model.ClupCity" placeholder="Klup Sehri" /> <br />
+
+    <input type="submit" value="Update" class="btn btn-success" />
+
+</form>
+

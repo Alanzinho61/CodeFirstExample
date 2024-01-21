@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WebApplication3.Models.Clup>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Klupler Listesi</h1>
+
+
+<table class="table table-sm">
+    
+   <a href="/Clup/Add" class="btn btn-success">Yeni Klup Ekle</a>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+            <th scope="col">Last</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.ClupName</td>
+                <td>@item.ClupPresident</td>
+                <td>@item.ClupColors</td>
+                <td>@item.ClupCity</td>
+                <td><a href="/Clup/Update/@item.Id" class="btn btn-success">Güncelle</a></td>
+                <td><a href="/Clup/Delete/@item.Id" class="btn btn-danger">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+
+</table>>
