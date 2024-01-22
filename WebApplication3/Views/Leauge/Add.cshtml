@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Add</h1>
+
+<form action="/Leauge/Add" method="post">
+
+    <input type="text" name="LeaugeName" placeholder="Lig Ismi" /> <br />
+    <input type="text" name="Country" placeholder="Ulke" /> <br />
+    <input type="text" name="NumberOfTeams" placeholder="Kac Takim Var?" /> <br />
+
+    <input type="submit" value="Add" class="btn btn-success" />
+
+</form>
