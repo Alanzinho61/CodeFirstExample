@@ -32,5 +32,34 @@ namespace WebApplication3.Controllers
             }
             return View();
         }
+
+        public IActionResult Update(int id)
+        {
+            return View(_db.Lauges.Find(id));
+        }
+        [HttpPost]
+        public IActionResult Update(Leauge l)
+        {
+            if (l != null)
+            {
+                _db.Lauges.Update(l);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var sil=_db.Lauges.Find(id);
+            if (sil != null)
+            {
+                _db.Lauges.Remove(sil);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

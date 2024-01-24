@@ -12,6 +12,8 @@ namespace WebApplication3.Models
         public DbSet<Clup> Clups { get; set; }
 
         public DbSet<Leauge> Lauges { get; set; }
+
+        public DbSet<Player> Players { get; set; }
     
     }
 }

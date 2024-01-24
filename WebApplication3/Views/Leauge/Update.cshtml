@@ -1,0 +1,20 @@
+﻿@model WebApplication3.Models.Leauge
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Update</h1>
+
+<form action="/Leauge/Update" method="post">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+
+    <input type="text" name="LeaugeName" value="@Model.LeaugeName" placeholder="Lig" /> <br /> <br />
+    <input type="text" name="Country" value="@Model.Country" placeholder="Ait Oldugu Ulke" /> <br /> <br />
+    <input type="text" name="NumberOfTeams" value="@Model.NumberOfTeams" placeholder="Ligde Kac Takim Var ?" /> <br /> <br />
+
+    <input type="submit" value="Update" class="btn btn-success" />
+
+</form>
