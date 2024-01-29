@@ -1,0 +1,19 @@
+﻿@model WebApplication3.Models.Player
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Add</h1>
+
+<form action="/Player/Add" method="post">
+
+    <input type="text" name="PlayerName" placeholder="Isim" /> <br />
+    <input type="text" name="Team" placeholder="Takim" /> <br />
+    <input type="text" name="Age" placeholder="Yas" /> <br />
+    <input type="text" name="Position" placeholder="Mevkii" /> <br />
+    <input type="text" name="Number" placeholder="Numara" /> <br />
+
+    <input type="submit" value="Add" class="btn btn-success" />
+
+</form>

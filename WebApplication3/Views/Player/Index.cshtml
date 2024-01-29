@@ -1,0 +1,38 @@
+﻿@model IEnumerable<WebApplication3.Models.Player>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+
+<table class="table table-sm">
+
+    <a href="/Player/Add" class="btn btn-success">Yeni Futbolcu Ekle</a>
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+            <th scope="col">Last</th>
+            <th scope="col">Last</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.PlayerName</td>
+                <td>@item.Team</td>
+                <td>@item.Age</td>
+                <td><a href="/Player/Update/@item.Id" class="btn btn-success">Güncelle</a></td>
+                <td><a href="/Player/Delete/@item.Id" class="btn btn-danger">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+
+</table>
